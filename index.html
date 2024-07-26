@@ -67,6 +67,16 @@
             padding: 0.75em;
             border-radius: 4px;
         }
+        .portfolio-gallery {
+            display: flex;
+            flex-direction: column; /* Alinha as imagens em coluna */
+            align-items: center; /* Centraliza as imagens horizontalmente */
+        }
+        .portfolio-gallery img {
+            max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +103,10 @@
     </section>
     <section id="portfolio">
         <h2>Portfólio</h2>
-        <p>Mostre seus trabalhos e projetos anteriores.</p>
+        <p>Logomarcas; Sites; Banners.</p>
+        <div class="portfolio-gallery">
+            <img src="imagens/Projeto.jpg" alt="Projeto">
+        </div>
     </section>
     <section id="contact">
         <h2>Contato</h2>
