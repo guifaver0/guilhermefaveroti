@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Cofrinho {
+    private List<Moeda> moedas;
+
+    Cofrinho() {
+        moedas = new ArrayList<>();
+    }
+
+    void adicionarMoeda(Moeda moeda) {
+        moedas.add(moeda);
+    }
+
+    void removerMoeda(Moeda moeda) {
+        moedas.remove(moeda);
+    }
+
+    void listarMoedas() {
+        System.out.println("Moedas no Cofrinho:");
+        for (Moeda moeda : moedas) {
+            System.out.println("Valor: R$ " + moeda.converterParaReal());
+        }
+    }
+
+    double calcularTotalEmReal() {
+        double total = 0;
+        for (Moeda moeda : moedas) {
+            total += moeda.converterParaReal();
+        }
+        return total;
+    }
+}
+

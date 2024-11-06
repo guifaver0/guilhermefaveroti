@@ -1,0 +1,42 @@
+abstract class Moeda {
+    double valor;
+
+    Moeda(double valor) {
+        this.valor = valor;
+    }
+
+    abstract double converterParaReal();
+}
+
+class Dolar extends Moeda {
+    Dolar(double valor) {
+        super(valor);
+    }
+
+    @Override
+    double converterParaReal() {
+        return this.valor * 5.0; // Exemplo: 1 Dólar = 5 Reais
+    }
+}
+
+class Euro extends Moeda {
+    Euro(double valor) {
+        super(valor);
+    }
+
+    @Override
+    double converterParaReal() {
+        return this.valor * 6.0; // Exemplo: 1 Euro = 6 Reais
+    }
+}
+
+class Real extends Moeda {
+    Real(double valor) {
+        super(valor);
+    }
+
+    @Override
+    double converterParaReal() {
+        return this.valor; // Já está em Reais
+    }
+}
